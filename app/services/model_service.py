@@ -4,7 +4,7 @@ from app.core.config import settings
 from app.cache.redis_cache import set_cached_prediction, get_cached_prediction
 
 model = joblib.load(settings.MODEL_PATH)
-
+#model = None
 
 def predict_car_price(data: dict):
     cache_key = " ".join([str(val) for val in data.values()])
